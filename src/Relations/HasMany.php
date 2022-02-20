@@ -25,9 +25,9 @@ class HasMany
     /**
      * @param int $offset
      * @param int $limit
-     * @return iterable
+     * @return array
      */
-    public function list(int $offset = 0, int $limit = -1): iterable
+    public function list(int $offset = 0, int $limit = -1): array
     {
         $keys = $this->connection()->lRange($this->realKey, $offset, $limit);
         if (empty($keys)) {

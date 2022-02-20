@@ -17,7 +17,7 @@ class Query
         $row = $this->className::storage()->get($realKey);
 
         /** @var Model $model */
-        $model = new $this->className;
+        $model = new $this->className();
         $model->hydrate($row);
         $model->setKey($key);
 
@@ -34,7 +34,7 @@ class Query
 
         $result = [];
         foreach($rows as $key => $row){
-            $model = new $this->className;
+            $model = new $this->className();
             $model->hydrate($row);
             $model->setKey($key);
 

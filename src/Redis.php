@@ -148,6 +148,6 @@ class Redis
 
     private function unserialize(string $data): array
     {
-        return unserialize($data, false);
+        return unserialize($data, [false]);
     }
 }

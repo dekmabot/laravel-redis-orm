@@ -42,12 +42,12 @@ trait Attributes
         return $this->values[$attribute] ?? null;
     }
 
-    protected function setKey(int|string $value): void
+    public function setKey(int|string $value): void
     {
         $this->values[$this->primaryKey] = $value;
     }
 
-    protected function hydrate(array $data): void
+    public function hydrate(array $data): void
     {
         $this->values = $data;
     }
