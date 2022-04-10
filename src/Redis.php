@@ -95,7 +95,7 @@ class Redis
      */
     public function lRem(string $realKey, int|string $key): bool
     {
-        return (bool)$this->connection()->command('LREM', [$realKey, 1, $key]);
+        return (bool)$this->connection()->command('LREM', [$realKey, $key, 1]);
     }
 
     /**
