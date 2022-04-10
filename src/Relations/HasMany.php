@@ -33,7 +33,7 @@ class HasMany
         if (empty($keys)) {
             return [];
         }
-        $keys = array_unique($keys);
+        $keys = array_values(array_unique($keys));
 
         return $this->belongsToClass::query()->findMany($keys);
     }
